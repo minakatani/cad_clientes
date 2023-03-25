@@ -1,13 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class AddCliente extends StatelessWidget {
-  final _nomecompleto = TextEditingController();
-  final _telefone = TextEditingController();
-  final _email = TextEditingController();
+class AddCliente extends StatefulWidget {
+  const AddCliente({super.key});
+
+  @override
+  State<AddCliente> createState() => _AddClienteState();
+}
+
+class _AddClienteState extends State<AddCliente> {
+  TextEditingController? _nomecompleto;
+  TextEditingController? _telefone;
+  TextEditingController? _email;
 
 //  AddCliente(this._nomecompleto, this._telefone, this._email,);
-
   CollectionReference clientes =
       FirebaseFirestore.instance.collection('clientes');
 
