@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cad_clientes/models/person.dart';
 
-class PersonListScreen extends StatefulWidget {
+class PersonAddScreen extends StatefulWidget {
   @override
-  _PersonListScreenState createState() => _PersonListScreenState();
+  _PersonAddScreenState createState() => _PersonAddScreenState();
 }
 
-class _PersonListScreenState extends State<PersonListScreen> {
+class _PersonAddScreenState extends State<PersonAddScreen> {
   final _nameController = TextEditingController();
   final _phoneController = TextEditingController();
   final _emailController = TextEditingController();
