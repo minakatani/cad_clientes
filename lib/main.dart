@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cad_clientes/add_user.dart';
+import 'package:cad_clientes/pages/list_user.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: AddCliente(),
+      home: PersonListScreen(),
     );
   }
 }
