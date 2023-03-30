@@ -9,6 +9,8 @@ Future<List> getPeople() async {
   return querySnapshot.docs.map((doc) => Person.fromSnapshot(doc)).toList();
 }
 
+final List<String> items = List<String>.generate(10000, (i) => '$i');
+
 class PersonListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,9 +34,10 @@ class PersonListScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final person = people[index];
               return ListTile(
-                title: Text(person.name),
-                subtitle: Text(person.email),
-                trailing: Text(person.phone),
+                title: Text("Nome: ${person.name}"),
+                subtitle:
+                    Text("Telefone: ${person.phone} | email: ${person.email}"),
+                trailing: Text("DN: ${person.dateofbirdh}"),
               );
             },
           );

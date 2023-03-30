@@ -3,14 +3,23 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class Person {
   final String name;
   final String phone;
+  final String dateofbirdh;
+  final String cpf;
   final String email;
 
-  Person({required this.name, required this.phone, required this.email});
+  Person(
+      {required this.name,
+      required this.phone,
+      required this.dateofbirdh,
+      required this.cpf,
+      required this.email});
 
   Map<String, dynamic> toMap() {
     return {
       'name': name,
       'phone': phone,
+      'dateofbirdh': dateofbirdh,
+      'cpf': cpf,
       'email': email,
     };
   }
@@ -20,6 +29,8 @@ class Person {
     return Person(
       name: data['name'],
       phone: data['phone'],
+      dateofbirdh: data['dateofbirdh'],
+      cpf: data['cpf'],
       email: data['email'],
     );
   }
